@@ -1,0 +1,186 @@
+/* Reset cơ bản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg);
+  font-family: var(--sans);
+}
+
+/* Bố cục chính */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 24px auto 0;
+  gap: 20px;
+  padding: 0 8px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.newsfeed {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Dùng chung cho các khối */
+.info-card,
+.contact-card,
+.skills-card,
+.create-post-card,
+.post-card {
+  background-color: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Info Component */
+.info-card {
+  text-align: center;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.info-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Contact Component */
+.contact-card {
+  display: flex;
+  gap: 10px;
+}
+.btn-add-friend,
+.btn-message {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-add-friend {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+.btn-message {
+  background-color: var(--accent-bg);
+  color: var(--text-h);
+}
+
+/* Skills Component */
+.skills-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.skills-card ul {
+  list-style: none;
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.skill-icon {
+  width: 30px;
+  height: 30px;
+}
+.skill-item p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Create Post Component */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.input-group img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.input-group input {
+  flex: 1;
+  border: none;
+  background-color: var(--accent-bg);
+  border-radius: 20px;
+  padding: 0 15px;
+  outline: none;
+  color: var(--text);
+}
+.btn-post {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-post:disabled {
+  background-color: var(--accent-bg);
+  color: var(--text-muted);
+  border-color: var(--border);
+  cursor: not-allowed;
+}
+
+/* Post Item Component */
+.post-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.post-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.post-content {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.post-actions {
+  display: flex;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  gap: 5px;
+}
+.post-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.post-actions button:hover {
+  background-color: var(--accent-bg);
+}
+.post-actions button.liked {
+  color: var(--text-h);
+}
