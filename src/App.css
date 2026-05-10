@@ -20,7 +20,7 @@ body {
   padding: 0 8px;
 }
 
-.sidebar {
+.profile {
   display: flex;
   flex-direction: column;
   gap: 15px;
